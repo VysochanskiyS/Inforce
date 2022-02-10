@@ -46,13 +46,19 @@ export const Busket = () => {
       <div>
         {isSorted
           ? sorted.map((item: Item) => (
-              <div style={{ display: "flex", justifyContent: "center" }}>
+              <div
+                key={item.id}
+                style={{ display: "flex", justifyContent: "center" }}
+              >
                 <div style={{ marginRight: "10px" }}>{item.name}</div>
                 <div>{item.count}</div>
               </div>
             ))
           : busket.map((item: Item) => (
-              <div style={{ display: "flex", justifyContent: "center" }}>
+              <div
+                key={item.id}
+                style={{ display: "flex", justifyContent: "center" }}
+              >
                 <div style={{ marginRight: "10px" }}>{item.name}</div>
                 <div>{item.count}</div>
               </div>
